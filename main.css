@@ -288,7 +288,8 @@ body {
 /* Desktop view (1280px and above) */
 @media screen and (min-width: 1280px) {
     .container {
-        background-image: url('../media/background.png');
+        /* background-image: url('../media/background.png'); */
+        background-image: url('background.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
