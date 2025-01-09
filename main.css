@@ -10,16 +10,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Font face declaration */
-@font-face {
-    font-family: 'Neue Haas Grotesk Display';
-    src: url('media/NeueHaasGrotesk-Display.woff2') format('woff2'),
-        url('media/NeueHaasGrotesk-Display.woff') format('woff'),
-        url('media/NeueHaasGrotesk-Display.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* Class for using the font */
 .neue-haas {
     font-family: "neue-haas-grotesk-text", sans-serif;
