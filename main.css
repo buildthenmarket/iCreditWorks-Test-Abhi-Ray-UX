@@ -1,0 +1,340 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Font face declaration */
+@font-face {
+    font-family: 'Neue Haas Grotesk Display';
+    src: url('media/NeueHaasGrotesk-Display.woff2') format('woff2'),
+        url('media/NeueHaasGrotesk-Display.woff') format('woff'),
+        url('media/NeueHaasGrotesk-Display.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Class for using the font */
+.neue-haas {
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* If you want different weight variations */
+.neue-haas-medium {
+    font-family: 'Neue Haas Grotesk Display', Arial, sans-serif;
+    font-weight: 500;
+}
+
+.neue-haas-bold {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.neue-haas-light {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    /* Hide by default on smaller screens */
+    background: none;
+}
+
+/* Left section styles */
+.left-section {
+    padding: 20px;
+    margin-left: 1rem;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* Default stacked layout */
+}
+
+.login-form-logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.orange-line {
+    height: 4.5px;
+    background-color: #EA731F;
+    margin: 7px 0;
+    border: none;
+}
+
+/* Login component styles */
+.login-component {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.login-component form {
+    padding: 51px 33px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 350px;
+}
+
+/* Input styles */
+.login-component input[type="text"],
+.login-component input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.34375rem;
+    text-transform: uppercase;
+}
+
+/* Remember me section */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.remember-me label {
+    color: #111111;
+}
+
+.forgot-password-link {
+    text-decoration: none;
+    color: #486082;
+    text-align: center;
+}
+
+/* Button styles */
+.btn {
+    background-color: #EA731F;
+    border-radius: 4px;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    max-width: 144px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Footer styles */
+.footer-grey {
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #5E6B75;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* password toggle */
+/* Password field container */
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+/* Password input styling */
+.password-field input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Toggle button styling */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.headline {
+    font-size: 2.5rem;
+}
+
+.body-copy {
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 1.24456rem;
+}
+
+/* Eye icon styling */
+.eye-icon {
+    width: 27px;
+    height: 27px;
+}
+
+.toggle-password:hover .eye-icon {
+    opacity: 0.8;
+}
+
+.middle-section {
+    color: #FFFFFF;
+    padding: 0 3rem;
+}
+
+.right-section {
+    margin-right: 4rem;
+}
+
+.fab {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #ffffff;
+    /* or any color that matches your design */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 10;
+}
+
+.fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.fab-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.image-container {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    display: flex;
+    align-items: flex-start;
+    /* vertical-align: top; */
+}
+
+/* First image (Logo and circle) */
+.landing-page-intro {
+    /* position: relative; */
+    z-index: 1;
+    max-width: 550px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin-left: 96px;
+}
+
+/* Second image (landing page image) */
+.landing-page-image {
+    position: absolute;
+    left: -8rem;
+    height: auto;
+    margin-top: 80px;
+    z-index: 2;
+}
+
+/* Mobile view (500px and under) */
+@media screen and (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+
+    section:not(.left-section) {
+        display: none;
+        /* Hide all sections except left-section */
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    section:not(.left-section) {
+        display: none;
+        /* Hide all sections except left-section */
+    }
+
+    .middle-section {
+        max-width: 350px;
+    }
+}
+
+/* Desktop view (1280px and above) */
+@media screen and (min-width: 1280px) {
+    .container {
+        background-image: url('media/background.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        max-width: 1920px;
+    }
+
+    section {
+        flex: 1;
+        /* Each section takes equal width */
+    }
+
+    .left-section {
+        flex: 0 0 20%;
+    }
+
+    .middle-section {
+        max-width: 400px;
+    }
+
+    .landing-page-image {
+        max-width: 57vw;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .image-container {
+        right: 40rem;
+    }
+
+    .landing-page-image {
+        /* margin-left: -320px; */
+        left: -21rem;
+    }
+}
