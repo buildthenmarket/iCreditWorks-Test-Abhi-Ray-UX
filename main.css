@@ -79,7 +79,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    min-width: 350px;
+    min-width: min(50%, max-content);
 }
 
 /* Input styles */
@@ -92,7 +92,6 @@ body {
 
 .login-form-title {
     text-align: center;
-    font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: 2.34375rem;
@@ -116,7 +115,6 @@ body {
     text-align: center;
 }
 
-/* Button styles */
 .btn {
     background-color: #EA731F;
     border-radius: 4px;
@@ -129,7 +127,6 @@ body {
     text-align: center;
 }
 
-/* Footer styles */
 .footer-grey {
     margin-top: 20px;
     padding: 10px 0;
@@ -144,14 +141,15 @@ body {
     border-bottom-right-radius: 6px;
 }
 
-/* password toggle */
-/* Password field container */
+.security-text {
+    font-size: 13px;
+}
+
 .password-field {
     position: relative;
     width: 100%;
 }
 
-/* Password input styling */
 .password-field input {
     width: 100%;
     padding: 10px;
@@ -160,7 +158,6 @@ body {
     border-radius: 4px;
 }
 
-/* Toggle button styling */
 .toggle-password {
     position: absolute;
     right: 10px;
@@ -239,18 +236,15 @@ body {
     top: 0;
     display: flex;
     align-items: flex-start;
-    /* vertical-align: top; */
 }
 
 /* First image (Logo and circle) */
 .landing-page-intro {
-    /* position: relative; */
     z-index: 1;
     max-width: 550px;
     height: auto;
     position: absolute;
     top: 0;
-    margin-left: 96px;
 }
 
 /* Second image (landing page image) */
@@ -258,7 +252,6 @@ body {
     position: absolute;
     left: -8rem;
     height: auto;
-    margin-top: 80px;
     z-index: 2;
 }
 
@@ -272,6 +265,10 @@ body {
         display: none;
         /* Hide all sections except left-section */
     }
+
+    .login-form-title {
+        font-size: 20.8px;
+    }
 }
 
 @media screen and (max-width: 1279px) {
@@ -279,16 +276,11 @@ body {
         display: none;
         /* Hide all sections except left-section */
     }
-
-    .middle-section {
-        max-width: 350px;
-    }
 }
 
 /* Desktop view (1280px and above) */
 @media screen and (min-width: 1280px) {
     .container {
-        /* background-image: url('../media/background.png'); */
         background-image: url('background.png');
         background-repeat: no-repeat;
         background-position: center;
@@ -309,23 +301,102 @@ body {
     .left-section {
         flex: 0 0 20%;
     }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+    .login-component {
+        min-width: 310px;
+    }
+
+    .login-component form {
+        padding: 32px 20px;
+    }
+
+    .security-text {
+        font-size: 12.5px;
+    }
 
     .middle-section {
         max-width: 400px;
     }
 
+    .image-container {
+        right: 33%;
+    }
+
+    .landing-page-intro {
+        max-width: 31vw;
+        right: -350px;
+    }
+
     .landing-page-image {
-        max-width: 57vw;
+        left: -14rem;
+        max-width: 50vw;
+        margin-top: 110px;
+    }
+
+    .login-form-title {
+        font-size: 15.3px;
     }
 }
 
-@media screen and (min-width: 1920px) {
-    .image-container {
-        right: 40rem;
+@media screen and (min-width: 1440px) and (max-width: 1918px) {
+    .login-form-title {
+        font-size: 18px;
+    }
+
+    .security-text {
+        font-size: 14px;
+    }
+
+    .middle-section {
+        max-width: 375px;
+        min-width: 280px;
+    }
+
+    .landing-page-intro {
+        left: -6rem;
     }
 
     .landing-page-image {
-        /* margin-left: -320px; */
-        left: -21rem;
+        max-width: 60vw;
+        left: -20rem;
+        margin-top: 125px;
+    }
+
+    .image-container {
+        right: 40rem;
+    }
+}
+
+@media screen and (min-width: 1919px) {
+    .login-component {
+        min-width: 480px;
+    }
+
+    .login-form-title {
+        font-size: 24px;
+    }
+
+    .security-text {
+        font-size: 19.5px;
+    }
+
+    .middle-section {
+        max-width: 394px;
+    }
+
+    .image-container {
+        right: 45rem;
+    }
+
+    .landing-page-image {
+        max-width: 65vw;
+        left: -24rem;
+        margin-top: 100px;
+    }
+
+    .landing-page-intro {
+        margin-left: -40px;
     }
 }
